@@ -90,7 +90,9 @@ def get_average_heat_level(spicy_foods):
 print(get_average_heat_level(spicy_foods)) 
 
 def create_spicy_food(spicy_foods,new_spicy_food):
-    spicy_foods.append(new_spicy_food)
-    return spicy_foods
+    new_list = spicy_foods.copy()
+
+    new_list.append(new_spicy_food)
+    return new_list
 
 print(create_spicy_food(spicy_foods, new_spicy_food={"name": "Griot","cuisine": "Haitian","heat_level": 10}))   
